@@ -190,12 +190,17 @@ Located in `.claude/commands/`:
 
 | Command | Description |
 |---------|-------------|
+| `ultra-think` | Deep analysis and strategic decision-making |
 | `create-feature` | Scaffold new features following best practices |
+| `create-architecture-documentation` | Generate comprehensive architecture documentation with diagrams |
+| `generate-tests` | Generate comprehensive test suite with full coverage |
 | `investigate` | Deep dive into bugs or issues |
-| `investigate-batch` | Batch investigation of multiple issues |
+| `investigate-batch` | Quick investigation for simple issues |
 | `open-pr` | Create pull requests with proper context |
 | `review-staged` | Review staged changes before committing |
-| `trim` | Cleanup and optimize code |
+| `trim` | Enable concise response mode |
+
+**📖 [Command Usage Guide](./.claude/commands/README.md)** - Learn when to use each command
 
 ### Skills
 
