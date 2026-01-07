@@ -7,6 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- **Enhanced all commands to follow create-feature pattern**
+  - Restructured all 5 commands with consistent, comprehensive format
+  - Added detailed workflow sections with numbered steps for each command
+  - Included requirements sections referencing appropriate skills
+  - Added clear output format specifications
+  - Enhanced descriptions and use cases
+  - Commands improved:
+    - `/trim` - Expanded from 7 to 49 lines with structured workflow for concise communication
+    - `/open-pr` - Enhanced with 6-step workflow, comprehensive quality checklist (26 to 81 lines)
+    - `/investigate` - Transformed into 5-step investigation framework with structured output (33 to 94 lines)
+    - `/investigate-batch` - Evolved into complete batch investigation workflow (13 to 86 lines)
+    - `/review-staged` - Upgraded to 8-step review process with verdict system (25 to 140 lines)
+  - Updated README.md command descriptions to reflect enhanced capabilities
+  - Total command documentation expanded from ~104 lines to ~450 lines
+  - All commands now follow the same pattern: frontmatter, header, description, workflow, requirements, output format
+
 ## [1.2.0] - 2026-01-07
 
 ### Changed
