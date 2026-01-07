@@ -7,6 +7,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-01-06
+
+### Added
+- **New comprehensive configuration file: `CLAUDE-verbose.md`**
+  - Detailed coding guidelines and best practices (154 lines)
+  - Principle-based approach without code examples for clarity
+  - Comprehensive sections covering all aspects of development:
+    - Core principles (type safety, explicitness, modern standards)
+    - Modern JavaScript/TypeScript standards (ESM, const/let, destructuring, etc.)
+    - Software engineering concepts (SOLID, DRY, separation of concerns)
+    - React & JSX best practices (hooks, composition, memoization)
+    - Framework-specific guidance for Next.js & React 19+
+    - Error handling, debugging, and observability
+    - Security, performance, and testing principles
+    - Code organization and documentation standards
+  - Prescriptive language using "Always prefer" format for clear guidance
+  - Focused on React/Next.js ecosystem
+  - Complements the minimal `CLAUDE.md` for users who want detailed guidelines
+  - References skill modules for even deeper expertise
+
 ## [1.0.2] - 2026-01-06
 
 ### Changed
@@ -102,7 +122,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Release versioning with semantic versioning
 - Topics for discoverability: `claude-code`, `opencode`, `template`, `developer-tools`, `configuration`, `dotfiles`
 
-[Unreleased]: https://github.com/whyleonardo/claude-config/compare/v1.0.2...HEAD
+[Unreleased]: https://github.com/whyleonardo/claude-config/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/whyleonardo/claude-config/compare/v1.0.2...v1.1.0
 [1.0.2]: https://github.com/whyleonardo/claude-config/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/whyleonardo/claude-config/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/whyleonardo/claude-config/releases/tag/v1.0.0
