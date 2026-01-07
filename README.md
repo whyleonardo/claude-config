@@ -159,19 +159,42 @@ The install script will:
 .claude/
 ├── CLAUDE.md           # Global settings and workflow preferences
 ├── commands/           # Custom slash commands
+│   ├── api-docs.md     # 🆕 API documentation generator
 │   ├── create-feature.md
+│   ├── debug.md        # 🆕 Systematic debugging workflow
 │   ├── investigate.md
 │   ├── investigate-batch.md
 │   ├── open-pr.md
+│   ├── refactor.md     # 🆕 Safe refactoring workflow
 │   ├── review-staged.md
+│   ├── test-gen.md     # 🆕 Comprehensive test generator
 │   └── trim.md
+├── docs/              # 🆕 Reference documentation
+│   ├── ENHANCEMENTS.md # What's new guide
+│   ├── hooks-reference.md  # Hooks configuration guide
+│   └── mcp-reference.md    # MCP integration guide
 └── skills/            # Coding guidelines and best practices
+    ├── api-documentation/  # 🆕 API docs generation
+    ├── debugging/          # 🆕 Systematic debugging
+    ├── performance/        # 🆕 Performance optimization
     ├── react/
     ├── reviewing-code/
+    ├── security/           # 🆕 Security review
     ├── software-engineering/
+    ├── test-generation/    # 🆕 Test generation
     ├── typescript/
     └── writing/
 ```
+
+### ✨ What's New
+
+See [ENHANCEMENTS.md](.claude/docs/ENHANCEMENTS.md) for detailed information about new features.
+
+**Recent Additions:**
+- 🆕 4 new commands: `/debug`, `/api-docs`, `/refactor`, `/test-gen`
+- 🆕 5 new skills: debugging, api-documentation, test-generation, performance, security
+- 🆕 Reference documentation for hooks and MCP integration
+- 🆕 Enhanced CLAUDE.md with comprehensive context patterns
 
 ### Global Settings (`CLAUDE.md`)
 
@@ -183,6 +206,8 @@ Core principles applied across all projects:
   - Error monitoring/observability
   - Automated testing
   - Readability/maintainability
+  - Security-first approach
+  - Performance awareness
 
 ### Custom Commands
 
@@ -190,11 +215,15 @@ Located in `.claude/commands/`:
 
 | Command | Description |
 |---------|-------------|
+| `api-docs` | 🆕 Generate comprehensive API documentation with OpenAPI specs |
 | `create-feature` | Scaffold new features following best practices |
+| `debug` | 🆕 Systematic debugging workflow with root cause analysis |
 | `investigate` | Deep dive into bugs or issues |
 | `investigate-batch` | Batch investigation of multiple issues |
 | `open-pr` | Create pull requests with proper context |
+| `refactor` | 🆕 Safe refactoring workflow with tests and validation |
 | `review-staged` | Review staged changes before committing |
+| `test-gen` | 🆕 Generate comprehensive unit/integration/component tests |
 | `trim` | Cleanup and optimize code |
 
 ### Skills
@@ -203,10 +232,15 @@ Detailed coding guidelines in `.claude/skills/`:
 
 | Skill | Description |
 |-------|-------------|
-| `software-engineering` | Core engineering principles and patterns |
-| `typescript` | TypeScript/JavaScript standards and best practices |
+| `api-documentation` | 🆕 Generates comprehensive API documentation |
+| `debugging` | 🆕 Systematic debugging and root cause analysis |
+| `performance` | 🆕 Performance optimization and profiling |
 | `react` | React/Next.js patterns and component architecture |
 | `reviewing-code` | Code review guidelines and checklists |
+| `security` | 🆕 Security vulnerabilities and best practices review |
+| `software-engineering` | Core engineering principles and patterns |
+| `test-generation` | 🆕 Comprehensive test coverage with best practices |
+| `typescript` | TypeScript/JavaScript standards and best practices |
 | `writing` | Technical writing and documentation standards |
 
 ## 🏷️ Version Pinning
