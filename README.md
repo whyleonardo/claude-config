@@ -190,12 +190,12 @@ Located in `.claude/commands/`:
 
 | Command | Description |
 |---------|-------------|
-| `create-feature` | Scaffold new features following best practices |
-| `investigate` | Deep dive into bugs or issues |
-| `investigate-batch` | Batch investigation of multiple issues |
-| `open-pr` | Create pull requests with proper context |
-| `review-staged` | Review staged changes before committing |
-| `trim` | Cleanup and optimize code |
+| `create-feature` | Automate feature development workflow with comprehensive planning and implementation |
+| `investigate` | Deep investigation with detailed analysis and actionable recommendations |
+| `investigate-batch` | Quick batch investigation with concise output (cost-efficient for multiple issues) |
+| `open-pr` | Create comprehensive PR with summary, diagram, and verification steps |
+| `review-staged` | Comprehensive review of staged changes before committing |
+| `trim` | Enable concise response mode for token-efficient communication |
 
 ### Skills
 
