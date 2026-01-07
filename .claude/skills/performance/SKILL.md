@@ -162,10 +162,10 @@ function MyComponent({ data }) {
 }
 
 // ✅ GOOD: Memoized callback
-function MyComponent({ data }) {
+function MyComponent({ data, onDataClick }) {
   const handleClick = useCallback(() => {
-    handleClick(data);
-  }, [data]);
+    onDataClick(data);
+  }, [data, onDataClick]);
   
   return <ChildComponent onClick={handleClick} />;
 }

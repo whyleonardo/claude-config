@@ -356,16 +356,17 @@ app.post('/api/login', loginLimiter, handleLogin);
 ## Detection Patterns
 
 ```bash
-# SQL Injection risks
-Grep pattern="query.*\$\{|query.*\+" output_mode="content"
-Grep pattern="execute.*\+|SELECT.*\$\{" output_mode="content"
+# SQL Injection risks (string concatenation in queries)
+Grep pattern="query.*\\\$\\\{|query.*\\+" output_mode="content"
+Grep pattern="execute.*\\+|SELECT.*\\\$\\\{" output_mode="content"
+Grep pattern="(sql|query).*=.*\`.*\\\$\\\{" output_mode="content"
 
-# Hardcoded secrets
-Grep pattern="password.*=.*['\"]|api[_-]?key.*=.*['\"]" output_mode="content" -i
-Grep pattern="secret.*=.*['\"]|token.*=.*['\"]" output_mode="content" -i
+# Hardcoded secrets (look for assignment with quotes)
+Grep pattern="(password|api[_-]?key)\\s*[:=]\\s*['\\\"][^'\\\"]{8,}['\\\"]" output_mode="content" -i
+Grep pattern="(secret|token)\\s*[:=]\\s*['\\\"][^'\\\"]{16,}['\\\"]" output_mode="content" -i
 
 # Dangerous functions
-Grep pattern="eval\(|innerHTML|dangerouslySetInnerHTML" output_mode="content"
+Grep pattern="\\beval\\(|innerHTML\\s*=|dangerouslySetInnerHTML" output_mode="content"
 Grep pattern="exec\(|system\(|shell_exec" output_mode="content"
 
 # Insecure crypto

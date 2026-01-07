@@ -44,12 +44,12 @@ Glob pattern="**/routes/*.{ts,js,py}"
 - Path parameters
 
 ### 2. Schema Analysis
-```typescript
-// Find type definitions
+```bash
+# Find type definitions
 Grep pattern="interface|type.*Request|Response"
 
-// Find validation schemas
-Grep pattern="z\.|yup\.|joi\." // Zod, Yup, Joi
+# Find validation schemas
+Grep pattern="z\.|yup\.|joi\."  # Zod, Yup, Joi
 ```
 
 ### 3. Group and Organize

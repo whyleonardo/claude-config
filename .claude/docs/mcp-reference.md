@@ -182,6 +182,8 @@ DATABASE_URL=
 SLACK_BOT_TOKEN=
 ```
 
+**Important:** Never commit actual credentials! The `.env.example` shows structure only. Real credentials go in `.env` (which should be in `.gitignore`). See Security Considerations section below.
+
 ### Variable Expansion
 
 MCP config supports `${VAR}` expansion:
