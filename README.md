@@ -1,6 +1,6 @@
 # Claude Code Settings
 
-Personal configuration repository for [Claude Code](https://opencode.ai/) (formerly OpenCode), containing custom commands, skills, and global settings.
+Personal configuration repository for [Claude Code](https://opencode.ai/), containing custom commands, skills, and global settings.
 
 [![GitHub Template](https://img.shields.io/badge/Template-Use%20This-blue?style=flat-square&logo=github)](https://github.com/whyleonardo/claude-config/generate)
 [![Version](https://img.shields.io/github/v/release/whyleonardo/claude-config?style=flat-square)](https://github.com/whyleonardo/claude-config/releases)
