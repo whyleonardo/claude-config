@@ -7,6 +7,53 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.0] - 2026-01-07
+
+### Added
+- **New Commands**
+  - `/ultra-think` - Deep analysis and strategic decision-making command
+    - Multi-perspective analysis (Technical, Business, User, System)
+    - Generates 3-5 solution approaches with pros/cons
+    - Comprehensive 2-4 page output with recommendations
+    - Ideal for architectural decisions and complex problem-solving
+  - `/generate-tests` - Comprehensive test suite generation
+    - Generates unit, integration, and edge case tests
+    - Supports Jest, Vitest, React Testing Library, Vue Test Utils
+    - Creates test files with AAA pattern and proper setup/teardown
+    - 80%+ coverage focus on critical paths
+  - `/create-architecture-documentation` - Architecture documentation generator
+    - Generates C4 Model diagrams (Context, Containers, Components, Code)
+    - Creates Architecture Decision Records (ADRs)
+    - Supports Arc42 comprehensive template
+    - PlantUML/Mermaid diagram-as-code generation
+    - Includes security, data, and deployment architecture docs
+
+### Added
+- **Comprehensive Command Documentation**
+  - Created `.claude/commands/README.md` with detailed usage guide (509 lines)
+  - Added Quick Reference table for all commands
+  - Visual Command Decision Tree for choosing right command
+  - Detailed sections for each command with:
+    - When to use / When NOT to use
+    - Real-world example scenarios
+    - Expected output descriptions
+    - Framework/tool support details
+  - 9 common workflows including:
+    - Feature development
+    - Bug fixing
+    - Test-driven development
+    - Architecture review preparation
+    - System migration/modernization
+  - Best practices and tips for command usage
+  - Cost efficiency guidance
+
+### Changed
+- **Updated README.md**
+  - Added 3 new commands to commands table
+  - Updated command descriptions for clarity
+  - Added link to comprehensive Command Usage Guide
+  - Total commands increased from 6 to 9
+
 ## [1.3.0] - 2026-01-07
 
 ### Changed
@@ -154,7 +201,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Release versioning with semantic versioning
 - Topics for discoverability: `claude-code`, `opencode`, `template`, `developer-tools`, `configuration`, `dotfiles`
 
-[Unreleased]: https://github.com/whyleonardo/claude-config/compare/v1.3.0...HEAD
+[Unreleased]: https://github.com/whyleonardo/claude-config/compare/v1.4.0...HEAD
+[1.4.0]: https://github.com/whyleonardo/claude-config/compare/v1.3.0...v1.4.0
 [1.3.0]: https://github.com/whyleonardo/claude-config/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/whyleonardo/claude-config/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/whyleonardo/claude-config/compare/v1.0.2...v1.1.0
