@@ -7,6 +7,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.2] - 2026-01-06
+
+### Changed
+- **Complete visual redesign of installation script with purple theme**
+  - Added beautiful purple/magenta color scheme matching Claude Code aesthetics
+  - Introduced elegant bordered header with stars (★) decoration
+  - Added sectioned output with clear visual separators
+  - Improved visual hierarchy with bold text and proper spacing
+  - Added Unicode symbols for better visual feedback (✓, ✗, →, •)
+  - Enhanced success message with bordered completion box
+  - Better color-coded feedback throughout installation process
+- Improved readability with structured sections:
+  - Configuration section showing mode, version, and target path
+  - Confirmation section with clear prompts
+  - Download section with progress indicators
+  - Installation section with step-by-step feedback
+  - Final success section with next steps
+- Enhanced user experience with dimmed/gray text for secondary information
+- Added light purple highlights for important information
+
 ## [1.0.1] - 2026-01-06
 
 ### Fixed
@@ -82,6 +102,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Release versioning with semantic versioning
 - Topics for discoverability: `claude-code`, `opencode`, `template`, `developer-tools`, `configuration`, `dotfiles`
 
-[Unreleased]: https://github.com/whyleonardo/claude-config/compare/v1.0.1...HEAD
+[Unreleased]: https://github.com/whyleonardo/claude-config/compare/v1.0.2...HEAD
+[1.0.2]: https://github.com/whyleonardo/claude-config/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/whyleonardo/claude-config/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/whyleonardo/claude-config/releases/tag/v1.0.0
