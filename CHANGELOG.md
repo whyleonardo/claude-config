@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-01-06
+
+### Fixed
+- Fix installation script not working when piped through curl (e.g., `curl | bash`)
+  - Added automatic detection of piped input using `[ ! -t 0 ]` check
+  - Script now auto-confirms when stdin is not a terminal
+  - Added `--yes` / `-y` flag to explicitly skip confirmation prompts
+  - This fixes the issue where `.claude/` directory was not created in new repositories
+
+### Changed
+- Updated help text to include `--yes` flag documentation
+- Improved confirmation prompt messages with better color coding
+
 ## [1.0.0] - 2026-01-06
 
 ### Added
@@ -69,5 +82,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Release versioning with semantic versioning
 - Topics for discoverability: `claude-code`, `opencode`, `template`, `developer-tools`, `configuration`, `dotfiles`
 
-[Unreleased]: https://github.com/whyleonardo/claude-config/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/whyleonardo/claude-config/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/whyleonardo/claude-config/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/whyleonardo/claude-config/releases/tag/v1.0.0

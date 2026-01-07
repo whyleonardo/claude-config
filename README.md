@@ -87,7 +87,10 @@ The install script supports the following flags:
 | `--global` or `-g` | Install to `~/.claude/` for all projects |
 | `--update` or `-u` | Update existing installation |
 | `--version TAG` or `-v TAG` | Install specific version (e.g., `v1.0.0`) |
+| `--yes` or `-y` | Skip confirmation prompts (auto-confirm) |
 | `--help` or `-h` | Show help message |
+
+**Note:** When piped through `curl | bash`, the script automatically skips confirmation prompts.
 
 **Examples:**
 ```bash

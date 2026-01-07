@@ -11,6 +11,7 @@ REPO_NAME="claude-config"
 VERSION="main"
 INSTALL_LOCATION="local"
 UPDATE_MODE=false
+SKIP_CONFIRM=false
 MAX_BACKUPS=3
 BACKUP_DIR=".claude-backups"
 TEMP_DIR="/tmp/claude-config-$$"
@@ -44,6 +45,7 @@ OPTIONS:
     -g, --global        Install to ~/.claude/ for global configuration
     -u, --update        Update existing installation
     -v, --version TAG   Install specific version (default: main)
+    -y, --yes           Skip confirmation prompts (auto-confirm)
     -h, --help          Show this help message
 
 EXAMPLES:
@@ -80,6 +82,10 @@ parse_arguments() {
                 ;;
             -u|--update)
                 UPDATE_MODE=true
+                shift
+                ;;
+            -y|--yes)
+                SKIP_CONFIRM=true
                 shift
                 ;;
             -v|--version)
@@ -127,6 +133,14 @@ get_backup_path() {
 # Confirm action with user
 confirm_action() {
     local message="$1"
+    
+    # Skip confirmation if --yes flag is set or if stdin is not a terminal (piped input)
+    if [ "$SKIP_CONFIRM" = true ] || [ ! -t 0 ]; then
+        echo -e "${BLUE}$message${NC}"
+        echo -e "${GREEN}Auto-confirming...${NC}"
+        return 0
+    fi
+    
     echo -e "${YELLOW}$message${NC}"
     read -p "Continue? [y/N]: " -n 1 -r
     echo
