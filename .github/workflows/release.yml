@@ -39,6 +39,11 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           VERSION="${{ steps.get_version.outputs.VERSION }}"
+          # Extract title from the first line of release notes (after the markdown header)
+          TITLE=$(head -n 1 release_notes.md | sed 's/^# //')
+          if [ -z "$TITLE" ]; then
+            TITLE="${VERSION}"
+          fi
           gh release create "${VERSION}" \
-            --title "${VERSION} - Enhanced Commands" \
+            --title "${TITLE}" \
             --notes-file release_notes.md
