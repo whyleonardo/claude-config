@@ -190,6 +190,7 @@ Located in `.claude/commands/`:
 
 | Command | Description |
 |---------|-------------|
+
 | `ultra-think` | Deep analysis and strategic decision-making |
 | `create-feature` | Scaffold new features following best practices |
 | `create-architecture-documentation` | Generate comprehensive architecture documentation with diagrams |
