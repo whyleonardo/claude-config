@@ -55,8 +55,14 @@ gh release create v1.3.0 \
 ### Verify Release
 After creating the release:
 - Verify the release appears at: https://github.com/whyleonardo/claude-config/releases
-- Test installation: `curl -fsSL https://cdn.jsdelivr.net/gh/whyleonardo/claude-config@${VERSION}/install.sh | bash`
-  - For v1.3.0: `curl -fsSL https://cdn.jsdelivr.net/gh/whyleonardo/claude-config@v1.3.0/install.sh | bash`
+- Test installation with the new version:
+  ```bash
+  # Replace VERSION with actual version (e.g., v1.3.0)
+  curl -fsSL https://cdn.jsdelivr.net/gh/whyleonardo/claude-config@VERSION/install.sh | bash
+  
+  # For this release (v1.3.0):
+  curl -fsSL https://cdn.jsdelivr.net/gh/whyleonardo/claude-config@v1.3.0/install.sh | bash
+  ```
 - Check that the version badge updates in README.md
 
 ## Release Checklist

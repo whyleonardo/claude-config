@@ -31,7 +31,12 @@ jobs:
           else
             echo "Extracting from CHANGELOG.md"
             # Extract the release notes from CHANGELOG.md for this version
-            sed -n "/## \[${VERSION#v}\]/,/## \[/p" CHANGELOG.md | sed '$d' > release_notes.md
+            # Find the version section and extract until the next version or end of file
+            awk "/## \[${VERSION#v}\]/,/^## \[|^$/" CHANGELOG.md | sed '$d' > release_notes.md
+            # If the file is empty, try alternative approach
+            if [ ! -s release_notes.md ]; then
+              sed -n "/## \[${VERSION#v}\]/,/## \[/p" CHANGELOG.md | sed '$d' > release_notes.md
+            fi
           fi
 
       - name: Create GitHub Release
@@ -39,9 +44,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           VERSION="${{ steps.get_version.outputs.VERSION }}"
-          # Extract title from the first line of release notes (after the markdown header)
-          TITLE=$(head -n 1 release_notes.md | sed 's/^# //')
-          if [ -z "$TITLE" ]; then
+          # Extract title from the first non-empty line of release notes (after the markdown header)
+          TITLE=$(grep -m 1 '^# ' release_notes.md | sed 's/^# //' || echo "")
+          # Fallback to version number if title extraction fails
+          if [ -z "$TITLE" ] || [ "$TITLE" = " " ]; then
             TITLE="${VERSION}"
           fi
           gh release create "${VERSION}" \
