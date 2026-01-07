@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-01-07
+
+### Changed
+- **Refactored `/create-feature` command with comprehensive workflow**
+  - Expanded from 25 lines to 65 lines with detailed guidance
+  - Enhanced Planning Phase (9 points): Added complexity estimation, task breakdown, acceptance criteria definition
+  - Comprehensive Implementation section (11 points): Type safety, modern standards, functional approach, component design, error handling, accessibility, performance, security, code organization
+  - Added Framework-Specific guidance: Next.js Server Components, React Query for client-side data
+  - New Quality Checks section (10 points): Type checking, linting, testing, accessibility validation, observability verification
+  - Clear Stage Changes workflow with conventional commit format
+  - Enhanced Requirements: References to CLAUDE-verbose.md, error boundaries, documentation approach
+  - Aligned with all principles from CLAUDE.md and CLAUDE-verbose.md
+
 ## [1.1.0] - 2026-01-06
 
 ### Added
@@ -122,7 +135,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Release versioning with semantic versioning
 - Topics for discoverability: `claude-code`, `opencode`, `template`, `developer-tools`, `configuration`, `dotfiles`
 
-[Unreleased]: https://github.com/whyleonardo/claude-config/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/whyleonardo/claude-config/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/whyleonardo/claude-config/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/whyleonardo/claude-config/compare/v1.0.2...v1.1.0
 [1.0.2]: https://github.com/whyleonardo/claude-config/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/whyleonardo/claude-config/compare/v1.0.0...v1.0.1
