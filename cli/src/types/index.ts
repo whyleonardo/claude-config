@@ -1,4 +1,4 @@
-export type AgentType = 'claude-code' | 'opencode';
+export type AgentType = 'claude-code' | 'opencode' | 'kiro';
 
 export type InstallTarget = 'project' | 'global';
 

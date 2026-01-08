@@ -23,6 +23,13 @@ export function getAgentConfig(agent: AgentType): AgentConfig {
         commitMessagePrefix: 'OpenCode',
         configDirName: '.opencode',
       };
+    case 'kiro':
+      return {
+        configFileName: 'KIRO.md',
+        agentName: 'Kiro',
+        commitMessagePrefix: 'Kiro',
+        configDirName: '.kiro',
+      };
   }
 }
 
@@ -36,7 +43,7 @@ export function customizeBaseConfigForAgent(
 
   // Replace agent name in "Do not include X in commit messages"
   customized = customized.replace(
-    /Do not include "(Claude Code|OpenCode)" in commit messages/,
+    /Do not include "(Claude Code|OpenCode|Kiro)" in commit messages/,
     `Do not include "${agentConfig.commitMessagePrefix}" in commit messages`
   );
 
