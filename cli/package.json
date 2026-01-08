@@ -1,6 +1,6 @@
 {
   "name": "@whyleonardo/agent-config",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Interactive CLI for setting up AI agent configurations",
   "type": "module",
   "bin": {

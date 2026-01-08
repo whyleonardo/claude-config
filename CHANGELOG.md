@@ -7,6 +7,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [CLI 0.2.0] - 2026-01-08
+
+### Added
+- **OpenCode-Specific Folder Structure**
+  - Proper support for OpenCode's official folder conventions
+  - `.opencode/` directory (instead of `.claude/` for OpenCode)
+  - `AGENTS.md` base config file (instead of `CLAUDE.md`)
+  - `skill/` directory for skills (singular, not plural)
+  - `command/` directory for commands (singular, not plural)
+  - Agent-aware path generation in CLI
+
+### Changed
+- Updated path resolver to generate agent-specific folder structures
+- Modified file writer to use correct paths based on selected agent
+- Enhanced documentation with side-by-side structure comparison
+- Updated OpenCode BASE_CONFIG.md template with proper AGENTS.md content
+
+### Fixed
+- OpenCode installations now follow official OpenCode documentation standards
+- Folder structure matches OpenCode expectations from https://opencode.ai/docs/
+
 ## [1.4.0] - 2026-01-07
 
 ### Added
