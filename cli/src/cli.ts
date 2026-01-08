@@ -44,7 +44,7 @@ Examples:
   npx @whyleonardo/agent-config
   npx @whyleonardo/agent-config init
 
-Learn more: https://github.com/whyleonardo/claude-config
+Learn more: https://github.com/whyleonardo/agent-config
   `);
 }
 

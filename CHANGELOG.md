@@ -262,12 +262,12 @@ Users previously using the bash installer must migrate to CLI:
 - Release versioning with semantic versioning
 - Topics for discoverability: `claude-code`, `opencode`, `template`, `developer-tools`, `configuration`, `dotfiles`
 
-[Unreleased]: https://github.com/whyleonardo/claude-config/compare/v2.0.0...HEAD
-[2.0.0]: https://github.com/whyleonardo/claude-config/compare/v1.4.0...v2.0.0
-[1.4.0]: https://github.com/whyleonardo/claude-config/compare/v1.3.0...v1.4.0
-[1.3.0]: https://github.com/whyleonardo/claude-config/compare/v1.2.0...v1.3.0
-[1.2.0]: https://github.com/whyleonardo/claude-config/compare/v1.1.0...v1.2.0
-[1.1.0]: https://github.com/whyleonardo/claude-config/compare/v1.0.2...v1.1.0
-[1.0.2]: https://github.com/whyleonardo/claude-config/compare/v1.0.1...v1.0.2
-[1.0.1]: https://github.com/whyleonardo/claude-config/compare/v1.0.0...v1.0.1
-[1.0.0]: https://github.com/whyleonardo/claude-config/releases/tag/v1.0.0
+[Unreleased]: https://github.com/whyleonardo/agent-config/compare/v2.0.0...HEAD
+[2.0.0]: https://github.com/whyleonardo/agent-config/compare/v1.4.0...v2.0.0
+[1.4.0]: https://github.com/whyleonardo/agent-config/compare/v1.3.0...v1.4.0
+[1.3.0]: https://github.com/whyleonardo/agent-config/compare/v1.2.0...v1.3.0
+[1.2.0]: https://github.com/whyleonardo/agent-config/compare/v1.1.0...v1.2.0
+[1.1.0]: https://github.com/whyleonardo/agent-config/compare/v1.0.2...v1.1.0
+[1.0.2]: https://github.com/whyleonardo/agent-config/compare/v1.0.1...v1.0.2
+[1.0.1]: https://github.com/whyleonardo/agent-config/compare/v1.0.0...v1.0.1
+[1.0.0]: https://github.com/whyleonardo/agent-config/releases/tag/v1.0.0

@@ -1,7 +1,7 @@
 import type { SkillType, CommandType, FetchedContent, AgentType } from '../types/index.js';
 import { error, warn } from './logger.js';
 
-const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/whyleonardo/claude-config/main';
+const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/whyleonardo/agent-config/main';
 
 export async function fetchFromGitHub(agent: AgentType): Promise<FetchedContent> {
   const skills = new Map<SkillType, string>();
