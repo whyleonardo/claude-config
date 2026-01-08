@@ -7,6 +7,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [CLI 0.3.0] - 2026-01-08
+
+### Added
+- **Kiro Agent Support**
+  - Added Kiro as a third AI agent option alongside Claude Code and OpenCode
+  - New agent type: `'kiro'` in TypeScript type system
+  - Kiro-specific configuration structure:
+    - Config file: `KIRO.md`
+    - Directory: `.kiro/`
+    - Commit message prefix: `Kiro`
+  - Interactive CLI now presents Kiro as selectable agent option
+  - Created `templates/agents/kiro/BASE_CONFIG.md` template
+  - Full integration with existing skills and commands system
+  - Maintains architectural consistency with Claude Code and OpenCode patterns
+
+### Changed
+- Extended `AgentType` union type to include `'kiro'` for type safety
+- Updated commit message customization regex to handle Kiro agent name
+- Added "kiro" keyword to package.json for better discoverability
+
+### Technical Details
+- 4 files modified: 32 insertions, 2 deletions
+- Zero breaking changes - purely additive feature
+- Follows established agent configuration patterns
+- Kiro shares the same skills system (typescript, react, software-engineering, etc.)
+- Kiro shares the same commands system (create-feature, investigate, review-staged, etc.)
+- Easy to extend with Kiro-specific customizations in the future
+
 ## [2.0.0] - 2026-01-08
 
 ### Removed
@@ -262,7 +290,8 @@ Users previously using the bash installer must migrate to CLI:
 - Release versioning with semantic versioning
 - Topics for discoverability: `claude-code`, `opencode`, `template`, `developer-tools`, `configuration`, `dotfiles`
 
-[Unreleased]: https://github.com/whyleonardo/agent-config/compare/v2.0.0...HEAD
+[Unreleased]: https://github.com/whyleonardo/agent-config/compare/v0.3.0...HEAD
+[CLI 0.3.0]: https://github.com/whyleonardo/agent-config/compare/v0.2.0...v0.3.0
 [2.0.0]: https://github.com/whyleonardo/agent-config/compare/v1.4.0...v2.0.0
 [1.4.0]: https://github.com/whyleonardo/agent-config/compare/v1.3.0...v1.4.0
 [1.3.0]: https://github.com/whyleonardo/agent-config/compare/v1.2.0...v1.3.0
