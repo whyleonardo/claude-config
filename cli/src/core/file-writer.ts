@@ -10,8 +10,8 @@ export async function writeConfiguration(
   selection: ConfigSelection,
   content: FetchedContent
 ): Promise<void> {
-  const basePath = resolveInstallPath(selection.target);
   const agentConfig = getAgentConfig(selection.agent);
+  const basePath = resolveInstallPath(selection.target, agentConfig.configDirName);
 
   // Ensure base directory exists
   if (!existsSync(basePath)) {
@@ -19,7 +19,7 @@ export async function writeConfiguration(
   }
 
   // Write base config
-  const baseConfigPath = getBaseConfigPath(basePath);
+  const baseConfigPath = getBaseConfigPath(basePath, agentConfig.configFileName);
   const customizedBaseConfig = customizeBaseConfigForAgent(
     content.baseConfig,
     selection.agent,
@@ -39,7 +39,7 @@ export async function writeConfiguration(
   for (const skill of selection.skills) {
     const skillContent = content.skills.get(skill);
     if (skillContent) {
-      const skillPath = getSkillPath(basePath, skill);
+      const skillPath = getSkillPath(basePath, skill, agentConfig.configDirName);
       await mkdir(dirname(skillPath), { recursive: true });
       await writeFile(skillPath, skillContent, 'utf-8');
       info(`Created skill: ${skill}`);
@@ -50,7 +50,7 @@ export async function writeConfiguration(
   for (const command of selection.commands) {
     const commandContent = content.commands.get(command);
     if (commandContent) {
-      const commandPath = getCommandPath(basePath, command);
+      const commandPath = getCommandPath(basePath, command, agentConfig.configDirName);
       await mkdir(dirname(commandPath), { recursive: true });
       await writeFile(commandPath, commandContent, 'utf-8');
       info(`Created command: ${command}`);
@@ -60,8 +60,8 @@ export async function writeConfiguration(
   success(`Configuration installed to: ${basePath}`);
 }
 
-export async function backupExistingConfig(target: 'project' | 'global'): Promise<string | null> {
-  const basePath = resolveInstallPath(target);
+export async function backupExistingConfig(target: 'project' | 'global', configDirName = '.claude'): Promise<string | null> {
+  const basePath = resolveInstallPath(target, configDirName);
   
   if (!existsSync(basePath)) {
     return null;

@@ -99,12 +99,18 @@ Added 3 new commands available in prompts:
 
 ### Claude Code
 - Anthropic's Claude for coding
+- Directory: `.claude/`
 - Config: `CLAUDE.md`
+- Skills: `.claude/skills/<name>/SKILL.md`
+- Commands: `.claude/commands/<name>.md`
 - Rule: "Do not include Claude Code in commit messages"
 
 ### OpenCode
 - Open source AI coding agent
-- Config: `CLAUDE.md`
+- Directory: `.opencode/`
+- Config: `AGENTS.md`
+- Skills: `.opencode/skill/<name>/SKILL.md`
+- Commands: `.opencode/command/<name>.md`
 - Rule: "Do not include OpenCode in commit messages"
 
 ## ✨ Key Benefits

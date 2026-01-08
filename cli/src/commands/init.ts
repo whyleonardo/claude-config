@@ -5,6 +5,7 @@ import { writeConfiguration, backupExistingConfig } from '../core/file-writer.js
 import { error, success, info } from '../utils/logger.js';
 import { existsSync } from 'node:fs';
 import { resolveInstallPath } from '../utils/path-resolver.js';
+import { getAgentConfig } from '../core/agent-config.js';
 
 export async function initCommand(): Promise<void> {
   try {
@@ -24,12 +25,13 @@ export async function initCommand(): Promise<void> {
 
     // Run interactive prompts
     const selection = await promptInitFlow();
+    const agentConfig = getAgentConfig(selection.agent);
 
     // Check if backup is needed
-    const installPath = resolveInstallPath(selection.target);
+    const installPath = resolveInstallPath(selection.target, agentConfig.configDirName);
     if (existsSync(installPath)) {
       spinner.start('Creating backup of existing configuration...');
-      const backupPath = await backupExistingConfig(selection.target);
+      const backupPath = await backupExistingConfig(selection.target, agentConfig.configDirName);
       if (backupPath) {
         spinner.stop('Backup created');
         info(`Backup saved to: ${backupPath}`);
@@ -53,8 +55,8 @@ export async function initCommand(): Promise<void> {
     success('Agent configuration has been installed successfully');
     console.log('');
     info('What was installed:');
-    console.log(`  • Agent: ${selection.agent}`);
-    console.log(`  • Base configuration (CLAUDE.md)`);
+    console.log(`  • Agent: ${agentConfig.agentName}`);
+    console.log(`  • Base configuration (${agentConfig.configFileName})`);
     console.log(`  • ${selection.skills.length} skill(s): ${selection.skills.join(', ')}`);
     console.log(`  • ${selection.commands.length} command(s): ${selection.commands.join(', ')}`);
     console.log('');
@@ -62,11 +64,11 @@ export async function initCommand(): Promise<void> {
     if (selection.target === 'global') {
       info('Next steps:');
       console.log('  1. This configuration will apply to all your projects');
-      console.log('  2. Restart your AI agent to apply changes');
+      console.log(`  2. Restart ${agentConfig.agentName} to apply changes`);
     } else {
       info('Next steps:');
-      console.log('  1. Commit the .claude/ directory to version control');
-      console.log('  2. Restart your AI agent to apply changes');
+      console.log(`  1. Commit the ${agentConfig.configDirName}/ directory to version control`);
+      console.log(`  2. Restart ${agentConfig.agentName} to apply changes`);
     }
     
     console.log('');

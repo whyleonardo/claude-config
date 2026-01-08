@@ -4,6 +4,7 @@ export interface AgentConfig {
   configFileName: string;
   agentName: string;
   commitMessagePrefix: string;
+  configDirName: string; // Directory name (.claude or .opencode)
 }
 
 export function getAgentConfig(agent: AgentType): AgentConfig {
@@ -13,12 +14,14 @@ export function getAgentConfig(agent: AgentType): AgentConfig {
         configFileName: 'CLAUDE.md',
         agentName: 'Claude Code',
         commitMessagePrefix: 'Claude Code',
+        configDirName: '.claude',
       };
     case 'opencode':
       return {
-        configFileName: 'CLAUDE.md', // OpenCode also uses .claude/CLAUDE.md
+        configFileName: 'AGENTS.md',
         agentName: 'OpenCode',
         commitMessagePrefix: 'OpenCode',
+        configDirName: '.opencode',
       };
   }
 }

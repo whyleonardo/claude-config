@@ -117,6 +117,7 @@ Bare essentials for any TypeScript project
 
 ## 📚 What Gets Installed
 
+### Claude Code Structure
 ```
 .claude/
 ├── CLAUDE.md              # Global settings and workflow preferences
@@ -128,6 +129,30 @@ Bare essentials for any TypeScript project
 │   ├── review-staged.md
 │   └── trim.md
 └── skills/               # Coding guidelines and best practices
+    ├── react/
+    │   └── SKILL.md
+    ├── reviewing-code/
+    │   └── SKILL.md
+    ├── software-engineering/
+    │   └── SKILL.md
+    ├── typescript/
+    │   └── SKILL.md
+    └── writing/
+        └── SKILL.md
+```
+
+### OpenCode Structure
+```
+.opencode/
+├── AGENTS.md              # Project instructions and rules
+├── command/               # Custom slash commands
+│   ├── create-feature.md
+│   ├── investigate.md
+│   ├── investigate-batch.md
+│   ├── open-pr.md
+│   ├── review-staged.md
+│   └── trim.md
+└── skill/                # Coding guidelines and best practices
     ├── react/
     │   └── SKILL.md
     ├── reviewing-code/

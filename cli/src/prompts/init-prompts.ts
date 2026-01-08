@@ -2,6 +2,7 @@ import * as clack from '@clack/prompts';
 import type { ConfigSelection, InstallTarget, ConfigApproach, PresetType, SkillType, CommandType, CommitStyle, AgentType } from '../types/index.js';
 import { listPresets, getPreset } from '../presets/index.js';
 import { resolveInstallPath } from '../utils/path-resolver.js';
+import { getAgentConfig } from '../core/agent-config.js';
 import { existsSync } from 'node:fs';
 
 export async function promptInitFlow(): Promise<ConfigSelection> {
@@ -21,12 +22,14 @@ export async function promptInitFlow(): Promise<ConfigSelection> {
     process.exit(0);
   }
 
+  const agentConfig = getAgentConfig(agent);
+
   // 2. Installation target
   const target = await clack.select<{ value: InstallTarget; label: string }[], InstallTarget>({
     message: 'Where would you like to install the configuration?',
     options: [
-      { value: 'project', label: 'Project (.claude/) - Local to this project' },
-      { value: 'global', label: 'Global (~/.claude/) - All projects' },
+      { value: 'project', label: `Project (${agentConfig.configDirName}/) - Local to this project` },
+      { value: 'global', label: `Global (~/${agentConfig.configDirName}/) - All projects` },
     ],
   });
 
@@ -36,7 +39,7 @@ export async function promptInitFlow(): Promise<ConfigSelection> {
   }
 
   // Check if existing config exists
-  const installPath = resolveInstallPath(target);
+  const installPath = resolveInstallPath(target, agentConfig.configDirName);
   if (existsSync(installPath)) {
     const shouldContinue = await clack.confirm({
       message: `Existing configuration found at ${installPath}. Continue?`,

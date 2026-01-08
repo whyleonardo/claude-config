@@ -139,12 +139,18 @@ The following commands were added to the available options:
 ## 🎯 Supported Agents
 
 ### Claude Code
+- **Directory**: `.claude/`
 - **Config File**: `CLAUDE.md`
+- **Skills Path**: `.claude/skills/<name>/SKILL.md`
+- **Commands Path**: `.claude/commands/<name>.md`
 - **Commit Message Rule**: "Do not include Claude Code in commit messages"
 - **Target**: Anthropic's Claude for coding
 
 ### OpenCode
-- **Config File**: `CLAUDE.md` (same structure)
+- **Directory**: `.opencode/`
+- **Config File**: `AGENTS.md`
+- **Skills Path**: `.opencode/skill/<name>/SKILL.md`
+- **Commands Path**: `.opencode/command/<name>.md`
 - **Commit Message Rule**: "Do not include OpenCode in commit messages"
 - **Target**: Open source AI coding agent
 

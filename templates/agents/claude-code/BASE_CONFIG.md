@@ -10,6 +10,8 @@ Focus on these principles in all code:
 - readability/maintainability
 
 All detailed coding guidelines are in the skills:
-- Use `software-engineering` skill for core principles
-- Use `typescript` skill for TypeScript/JavaScript
-- Use `react` skill for React/Next.js
+- `software-engineering` - Core engineering principles
+- `typescript` - TypeScript/JavaScript best practices
+- `react` - React and Next.js patterns
+- `writing` - Technical writing guidelines
+- `reviewing-code` - Code review checklist
