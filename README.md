@@ -1,6 +1,6 @@
 # Agent Config
 
-Personal configuration repository for AI agents ([OpenCode](https://opencode.ai/), Claude, etc.), containing custom commands, skills, and workflow settings.
+Personal configuration repository for AI agents ([OpenCode](https://opencode.ai/), [Claude](https://claude.com/product/claude-code), containing custom commands, skills, and workflow settings.
 
 [![GitHub](https://img.shields.io/badge/GitHub-agent--config-blue?style=flat-square&logo=github)](https://github.com/whyleonardo/agent-config)
 [![npm](https://img.shields.io/badge/npm-%40whyleonardo%2Fagent--config-red?style=flat-square&logo=npm)](https://www.npmjs.com/package/@whyleonardo/agent-config)
