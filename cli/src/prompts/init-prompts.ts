@@ -14,6 +14,7 @@ export async function promptInitFlow(): Promise<ConfigSelection> {
     options: [
       { value: 'claude-code', label: 'Claude Code', hint: 'Anthropic Claude for coding' },
       { value: 'opencode', label: 'OpenCode', hint: 'Open source AI coding agent' },
+      { value: 'kiro', label: 'Kiro', hint: 'Kiro AI assistant' },
     ],
   });
 
