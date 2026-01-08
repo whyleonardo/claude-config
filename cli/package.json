@@ -1,0 +1,39 @@
+{
+  "name": "@whyleonardo/agent-config",
+  "version": "0.1.0",
+  "description": "Interactive CLI for setting up AI agent configurations",
+  "type": "module",
+  "bin": {
+    "agent-config": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/cli.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "ai",
+    "agents",
+    "opencode",
+    "claude",
+    "configuration",
+    "cli"
+  ],
+  "author": "whyleonardo",
+  "license": "MIT",
+  "dependencies": {
+    "@clack/prompts": "^0.7.0",
+    "picocolors": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
