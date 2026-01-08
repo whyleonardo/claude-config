@@ -1,4 +1,8 @@
-# Release v1.3.0 - Enhanced Commands
+# Release v1.3.0 - Enhanced Commands (LEGACY)
+
+**Note:** This release is for historical reference. The bash installer mentioned in this release was removed in v2.0.0. Use `npx @whyleonardo/agent-config` for installation.
+
+---
 
 Release Date: 2026-01-07
 
@@ -45,7 +49,14 @@ This release brings comprehensive improvements to all 5 custom commands, making 
 - Total command documentation expanded from ~104 lines to ~450 lines
 - All commands now follow consistent pattern: frontmatter, header, description, workflow, requirements, output format
 
-## Installation
+## Installation (DEPRECATED - See v2.0.0)
+
+**Note:** Bash installer removed in v2.0.0. Use `npx @whyleonardo/agent-config` instead.
+
+### Legacy Installation Methods (No Longer Supported)
+
+<details>
+<summary>Historical reference only</summary>
 
 ### Quick Install (Recommended)
 ```bash
@@ -65,6 +76,8 @@ curl -fsSL https://cdn.jsdelivr.net/gh/whyleonardo/claude-config@main/install.sh
 # Or for global installation
 curl -fsSL https://cdn.jsdelivr.net/gh/whyleonardo/claude-config@main/install.sh | bash -s -- --global --version v1.3.0
 ```
+
+</details>
 
 ## Full Changelog
 https://github.com/whyleonardo/claude-config/compare/v1.2.0...v1.3.0

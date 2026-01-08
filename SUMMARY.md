@@ -1,4 +1,8 @@
-# Release Preparation Summary - v1.3.0
+# Release Preparation Summary - v1.3.0 (LEGACY)
+
+**Note:** This document is for historical reference. The CI/CD workflow mentioned here was removed in v2.0.0 and will be reimplemented in the future.
+
+---
 
 ## Overview
 This PR prepares the release of version 1.3.0 of the claude-config template, documenting and automating the process of releasing all previously unreleased changes.
@@ -19,12 +23,14 @@ This PR prepares the release of version 1.3.0 of the claude-config template, doc
   
 - **POST_MERGE_STEPS.md**: Step-by-step guide for completing the release after PR merge
 
-### 3. Automated Release Process
+### 3. Automated Release Process (DEPRECATED - Removed in v2.0.0)
 Created `.github/workflows/release.yml` that:
 - Triggers on version tags (v*.*.*)
 - Extracts release notes from RELEASE_NOTES_*.md or CHANGELOG.md
 - Automatically creates GitHub releases with proper titles and descriptions
 - Includes error handling and fallbacks
+
+**Note:** This workflow was removed in v2.0.0. CI/CD will be reimplemented in the future.
 
 ### 4. Created Git Tag
 - Tag `v1.3.0` created locally, pointing to the latest commit
@@ -79,12 +85,13 @@ Once this PR is merged to the `main` branch:
 ## Files Changed
 
 ```
-.github/workflows/release.yml   (new)    - Automated release workflow
 CHANGELOG.md                    (modified) - Version 1.3.0 documentation
-POST_MERGE_STEPS.md            (new)      - Post-merge instructions
-RELEASE_NOTES_v1.3.0.md        (new)      - Release notes for v1.3.0
-SUMMARY.md                     (new)      - This summary
+POST_MERGE_STEPS.md            (new)      - Post-merge instructions (now legacy)
+RELEASE_NOTES_v1.3.0.md        (new)      - Release notes for v1.3.0 (now legacy)
+SUMMARY.md                     (new)      - This summary (now legacy)
 ```
+
+**Note:** `.github/workflows/release.yml` was removed in v2.0.0
 
 ## Technical Details
 

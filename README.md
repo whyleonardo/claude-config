@@ -7,12 +7,10 @@ Personal configuration repository for AI agents ([OpenCode](https://opencode.ai/
 
 ## 🚀 Quick Start
 
-Choose your preferred installation method:
-
-### Method 1: Interactive CLI (Recommended) ✨
+### Installation
 
 ```bash
-# Run once - interactive setup with presets
+# Run the interactive CLI
 npx @whyleonardo/agent-config
 ```
 
@@ -21,31 +19,14 @@ npx @whyleonardo/agent-config
 - Choose from preset configurations or customize
 - Select only the skills/commands you need
 - Beautiful terminal UI
+- Always fetches latest version
+- Automatic backup of existing configurations
+
+**Requirements:**
+- Node.js ≥18.0.0
+- npm (comes with Node.js)
 
 [📖 CLI Documentation](./cli/README.md)
-
-### Method 2: Bash Script (Legacy)
-
-```bash
-# One-liner installation
-curl -fsSL https://cdn.jsdelivr.net/gh/whyleonardo/agent-config@main/install.sh | bash
-```
-
-**Benefits:**
-- Fast, no dependencies
-- Works without Node.js
-- Installs everything at once
-
-## 📦 Installation Methods Comparison
-
-| Feature | Interactive CLI | Bash Script |
-|---------|----------------|-------------|
-| **Customization** | ✅ Full control | ❌ All or nothing |
-| **Presets** | ✅ Multiple presets | ❌ Single preset |
-| **Interactive** | ✅ Beautiful prompts | ⚠️ Basic prompts |
-| **Requirements** | Node.js ≥18 | bash, git |
-| **Updates** | Fetch latest always | Version pinning |
-| **Backup** | ✅ Automatic | ✅ Automatic |
 
 ## ✨ What's Included
 
@@ -127,73 +108,27 @@ Essentials only for any TypeScript project
 - Skills: TypeScript, Software Engineering
 - Commands: investigate
 
-## 📚 Detailed Installation Guides
-
-### 🖥️ Interactive CLI Installation
+## 📚 CLI Installation Guide
 
 ```bash
 # Install and run
 npx @whyleonardo/agent-config
 
 # Follow the prompts:
-# 1. Choose installation target (project/global)
-# 2. Select a preset or customize
-# 3. Pick skills and commands
-# 4. Configure git workflow
+# 1. Choose AI agent (Claude Code / OpenCode)
+# 2. Choose installation target (project/global)
+# 3. Select a preset or customize
+# 4. Pick skills and commands
+# 5. Configure git workflow
 ```
 
 [Full CLI Documentation →](./cli/README.md)
 
-### 🔧 Bash Script Installation
-
-#### Local Installation (Project-specific)
-
-```bash
-# Using jsDelivr CDN (recommended)
-curl -fsSL https://cdn.jsdelivr.net/gh/whyleonardo/agent-config@main/install.sh | bash
-
-# Or using GitHub raw
-curl -fsSL https://raw.githubusercontent.com/whyleonardo/agent-config/main/install.sh | bash
-```
-
-#### Global Installation (All projects)
-
-```bash
-# Using jsDelivr CDN
-curl -fsSL https://cdn.jsdelivr.net/gh/whyleonardo/agent-config@main/install.sh | bash -s -- --global
-
-# Or using GitHub raw
-curl -fsSL https://raw.githubusercontent.com/whyleonardo/agent-config/main/install.sh | bash -s -- --global
-```
-
-#### Script Options
-
-| Flag | Description |
-|------|-------------|
-| `--local` or `-l` | Install to `./.claude/` in current directory (default) |
-| `--global` or `-g` | Install to `~/.claude/` for all projects |
-| `--update` or `-u` | Update existing installation |
-| `--version TAG` | Install specific version (e.g., `v1.0.0`) |
-| `--yes` or `-y` | Skip confirmation prompts |
-| `--help` or `-h` | Show help message |
-
 ## 🔄 Updating
-
-### Update via CLI
 
 ```bash
 # Run the CLI again - it will detect and backup existing config
 npx @whyleonardo/agent-config
-```
-
-### Update via Bash Script
-
-```bash
-# Update local installation
-curl -fsSL https://cdn.jsdelivr.net/gh/whyleonardo/agent-config@main/install.sh | bash -s -- --update
-
-# Update global installation
-curl -fsSL https://cdn.jsdelivr.net/gh/whyleonardo/agent-config@main/install.sh | bash -s -- --global --update
 ```
 
 ## 🌍 Local vs Global Installation
@@ -245,7 +180,6 @@ agent-config/
 │   ├── src/          # TypeScript source
 │   ├── dist/         # Built files
 │   └── package.json
-├── install.sh        # Bash installer script
 └── README.md         # This file
 ```
 

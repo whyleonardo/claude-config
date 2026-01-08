@@ -25,7 +25,6 @@ You have two options:
 ### Option 2: Rename repo to `agent-config`
 - Rename GitHub repo: `claude-config` → `agent-config`
 - Update `cli/src/utils/github-fetcher.ts` back to `agent-config`
-- Update `install.sh` if it has hardcoded repo names
 - All documentation already references `agent-config`
 
 ## Recommendation

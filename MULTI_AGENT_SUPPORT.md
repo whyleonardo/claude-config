@@ -158,17 +158,15 @@ The following commands were added to the available options:
 
 ### For Existing Configs
 
-The `.claude/` directory remains unchanged and serves as:
-1. **Backward compatibility** for bash installer
-2. **Reference implementation** for Claude Code
+The `.claude/` directory remains as the reference template for CLI installations.
 
 ### For New Installations
 
-All new installations via CLI use the templates system:
-1. User selects agent
+All installations use the CLI with templates system:
+1. User selects agent (Claude Code / OpenCode)
 2. CLI fetches from `templates/` directory
 3. Agent-specific customizations applied
-4. Configuration written to `.claude/`
+4. Configuration written to appropriate directory (`.claude/` or `.opencode/`)
 
 ## 🚀 Adding New Agents
 

@@ -1,6 +1,10 @@
-# Post-Merge Release Steps for v1.3.0
+# Post-Merge Release Steps for v1.3.0 (LEGACY)
 
-This document outlines the steps needed to complete the release after this PR is merged to `main`.
+**Note:** This document is for historical reference. CI/CD was removed in v2.0.0 and will be reimplemented in the future.
+
+---
+
+This document outlined the steps needed to complete the release after the PR was merged to `main`.
 
 ## Automated Steps (Already Done in PR)
 - ✅ Updated CHANGELOG.md with v1.3.0 release section
@@ -52,16 +56,13 @@ gh release create v1.3.0 \
 5. Copy release notes from `RELEASE_NOTES_v1.3.0.md`
 6. Publish release
 
-### Verify Release
+### Verify Release (DEPRECATED)
 After creating the release:
 - Verify the release appears at: https://github.com/whyleonardo/claude-config/releases
-- Test installation with the new version:
+- Test installation with CLI:
   ```bash
-  # Replace VERSION with actual version (e.g., v1.3.0)
-  curl -fsSL https://cdn.jsdelivr.net/gh/whyleonardo/claude-config@VERSION/install.sh | bash
-  
-  # For this release (v1.3.0):
-  curl -fsSL https://cdn.jsdelivr.net/gh/whyleonardo/claude-config@v1.3.0/install.sh | bash
+  # Current installation method (v2.0.0+)
+  npx @whyleonardo/agent-config
   ```
 - Check that the version badge updates in README.md
 

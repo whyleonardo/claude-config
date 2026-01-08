@@ -2,21 +2,16 @@
 
 ## For End Users
 
-### Option 1: Interactive CLI (Recommended)
+### Installation (CLI Only)
 ```bash
 npx @whyleonardo/agent-config
 ```
 
 Follow the prompts to customize your setup!
 
-### Option 2: Bash Script
-```bash
-# Local install
-curl -fsSL https://cdn.jsdelivr.net/gh/whyleonardo/agent-config@main/install.sh | bash
-
-# Global install
-curl -fsSL https://cdn.jsdelivr.net/gh/whyleonardo/agent-config@main/install.sh | bash -s -- --global
-```
+**Requirements:**
+- Node.js ≥18.0.0
+- npm (comes with Node.js)
 
 ## For Developers
 
@@ -75,7 +70,7 @@ agent-config/
 │       ├── types/        # TypeScript types
 │       ├── utils/        # Utility functions
 │       └── cli.ts        # Entry point
-└── install.sh        # Bash installer (legacy)
+└── README.md
 ```
 
 ### Making Changes

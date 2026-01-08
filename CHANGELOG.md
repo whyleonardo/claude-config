@@ -7,6 +7,46 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0] - 2026-01-08
+
+### Removed
+- **BREAKING: Bash installation script (`install.sh`)**
+  - Removed legacy bash installer (446 lines)
+  - Installation now exclusively through `npx @whyleonardo/agent-config`
+  - Requirement: Node.js ≥18.0.0 now mandatory for installation
+  - Users without Node.js must install manually by cloning repository
+- **BREAKING: CI/CD Infrastructure**
+  - Removed `.github/workflows/release.yml`
+  - Removed entire `.github/` directory
+  - GitHub Actions automation removed (will be reimplemented in future)
+  - No automated releases until CI/CD is rebuilt
+  - Manual release process required for now
+
+### Changed
+- **Installation is now CLI-only**
+  - Single installation method for better maintenance and user experience
+  - Interactive prompts provide superior UX compared to bash script
+  - All users must have Node.js ≥18 installed
+  - Simplified documentation focusing on CLI approach
+- **Updated Documentation**
+  - README.md simplified to CLI-only installation
+  - Removed bash script comparison tables
+  - Removed bash installation instructions
+  - Updated repository structure diagrams
+- **Implementation Documentation**
+  - Updated IMPLEMENTATION.md to reflect CLI-only approach
+  - Removed bash installer migration guides
+  - Updated future enhancement roadmap
+- **Multi-Agent Support Documentation**
+  - Removed backward compatibility mentions
+  - Updated migration path to focus on CLI templates system
+
+### Migration Notes
+Users previously using the bash installer must migrate to CLI:
+- Old: `curl -fsSL https://cdn.jsdelivr.net/gh/whyleonardo/agent-config@main/install.sh | bash`
+- New: `npx @whyleonardo/agent-config`
+- Manual alternative: Clone repository and copy `.claude/` directory
+
 ## [CLI 0.2.0] - 2026-01-08
 
 ### Added
@@ -127,10 +167,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Complements the minimal `CLAUDE.md` for users who want detailed guidelines
   - References skill modules for even deeper expertise
 
-## [1.0.2] - 2026-01-06
+## [1.0.2] - 2026-01-06 (Legacy)
 
 ### Changed
-- **Complete visual redesign of installation script with purple theme**
+- **Complete visual redesign of installation script with purple theme** (DEPRECATED: Bash installer removed in v2.0.0)
   - Added beautiful purple/magenta color scheme matching Claude Code aesthetics
   - Introduced elegant bordered header with stars (★) decoration
   - Added sectioned output with clear visual separators
@@ -147,10 +187,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Enhanced user experience with dimmed/gray text for secondary information
 - Added light purple highlights for important information
 
-## [1.0.1] - 2026-01-06
+## [1.0.1] - 2026-01-06 (Legacy)
 
 ### Fixed
-- Fix installation script not working when piped through curl (e.g., `curl | bash`)
+- Fix installation script not working when piped through curl (DEPRECATED: Bash installer removed in v2.0.0)
   - Added automatic detection of piped input using `[ ! -t 0 ]` check
   - Script now auto-confirms when stdin is not a terminal
   - Added `--yes` / `-y` flag to explicitly skip confirmation prompts
@@ -187,7 +227,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `writing` - Technical writing and documentation standards
 
 #### Installation
-- Robust installation script (`install.sh`) with:
+- Robust installation script (`install.sh`) with: (DEPRECATED: Removed in v2.0.0 - use CLI instead)
   - Local installation support (`./.claude/`)
   - Global installation support (`~/.claude/`)
   - Version pinning capability
@@ -202,12 +242,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 #### Documentation
 - Comprehensive README with:
   - Quick start guide for new and existing projects
-  - Multiple installation methods (GitHub template, install script, manual)
-  - jsDelivr CDN URLs for faster, globally cached downloads
-  - GitHub raw URLs as alternative
+  - Multiple installation methods (CLI and manual) (Note: Bash script removed in v2.0.0)
+  - jsDelivr CDN URLs for faster, globally cached downloads (Note: Legacy bash installer)
+  - GitHub raw URLs as alternative (Note: Legacy bash installer)
   - Update instructions with detailed explanations
   - Global vs local installation comparison
-  - Version pinning guide with examples
+  - Version pinning guide with examples (Note: Legacy bash installer)
   - Troubleshooting section covering common issues
   - Contributing guidelines
   - Links to Claude Code documentation
@@ -222,7 +262,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Release versioning with semantic versioning
 - Topics for discoverability: `claude-code`, `opencode`, `template`, `developer-tools`, `configuration`, `dotfiles`
 
-[Unreleased]: https://github.com/whyleonardo/claude-config/compare/v1.4.0...HEAD
+[Unreleased]: https://github.com/whyleonardo/claude-config/compare/v2.0.0...HEAD
+[2.0.0]: https://github.com/whyleonardo/claude-config/compare/v1.4.0...v2.0.0
 [1.4.0]: https://github.com/whyleonardo/claude-config/compare/v1.3.0...v1.4.0
 [1.3.0]: https://github.com/whyleonardo/claude-config/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/whyleonardo/claude-config/compare/v1.1.0...v1.2.0
