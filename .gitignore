@@ -21,3 +21,12 @@ Thumbs.db
 .idea/
 *.sublime-project
 *.sublime-workspace
+
+# CLI build output
+cli/dist/
+cli/node_modules/
+cli/*.tgz
+
+# Logs
+*.log
+npm-debug.log*
